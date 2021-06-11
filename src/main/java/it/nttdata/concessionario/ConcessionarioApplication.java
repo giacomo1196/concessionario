@@ -1,4 +1,4 @@
-package it.nttdataconcessionario;
+package it.nttdata.concessionario;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
