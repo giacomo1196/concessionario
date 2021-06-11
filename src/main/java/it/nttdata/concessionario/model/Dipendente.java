@@ -24,10 +24,12 @@ public class Dipendente {
 
     @NonNull
     @Size(min = 1)
-    private String cognomoe;
+    private String cognome;
+
     private Double stipendio;
+
     @NonNull
-    @Min(6)
+    @Min(16)
     private Integer eta;
 
     public Dipendente() {}
@@ -57,11 +59,11 @@ public class Dipendente {
     }
 
     public String getCognomoe() {
-        return cognomoe;
+        return cognome;
     }
 
     public void setCognomoe(String cognomoe) {
-        this.cognomoe = cognomoe;
+        this.cognome = cognomoe;
     }
 
     public double getStipendio() {

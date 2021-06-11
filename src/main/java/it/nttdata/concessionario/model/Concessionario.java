@@ -31,6 +31,9 @@ public class Concessionario {
     @OneToMany(mappedBy = "concessionario")
     private Set<Dipendente> listadipendente;
 
+    @OneToMany(mappedBy = "concessionario")
+    private Set<Auto> listaAuto;
+
 
     public Concessionario() {}
 
@@ -80,5 +83,13 @@ public class Concessionario {
 
     public void setListadipendente(Set<Dipendente> listadipendente) {
         this.listadipendente = listadipendente;
+    }
+
+    public Set<Auto> getListaAuto() {
+        return listaAuto;
+    }
+
+    public void setListaAuto(Set<Auto> listaAuto) {
+        this.listaAuto = listaAuto;
     }
 }
