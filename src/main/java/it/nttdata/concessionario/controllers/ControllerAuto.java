@@ -2,6 +2,7 @@ package it.nttdata.concessionario.controllers;
 
 import it.nttdata.concessionario.models.Auto;
 import it.nttdata.concessionario.repositories.AutoRepository;
+import it.nttdata.concessionario.repositories.ConcessionarioRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,11 +17,15 @@ import java.util.List;
 @Controller
 public class ControllerAuto {
 
-    private AutoRepository autoRepository;
+    private final AutoRepository autoRepository;
+    private final ConcessionarioRepository concessionarioRepository;
 
-    public ControllerAuto(AutoRepository autoRepository) {
+
+
+    public ControllerAuto(AutoRepository autoRepository, ConcessionarioRepository concessionarioRepository) {
 
         this.autoRepository = autoRepository;
+        this.concessionarioRepository = concessionarioRepository;
     }
 
 
@@ -48,17 +53,17 @@ public class ControllerAuto {
     }
 
     @GetMapping("/addauto")
-    public String getForm()
+    public String getForm(Model model)
     {
+        model.addAttribute("concessionarie", concessionarioRepository.findAll());
         return "formauto";
     }
 
     @PostMapping("/addauto")
-    @ResponseBody
     public String addAuto(Auto auto)
     {
-
-        return "Ho aggiunto l'auto";
+        autoRepository.save(auto);
+        return "redirect:/listaauto";
     }
 
 }

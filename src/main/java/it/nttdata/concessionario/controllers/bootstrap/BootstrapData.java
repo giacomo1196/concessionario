@@ -30,12 +30,14 @@ public class BootstrapData implements CommandLineRunner {
         c1.setVia("Via Roma");
         c1.setCitta("Roma");
         c1.setRegione(Regione.LAZIO);
+        c1.setDescrizione("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque justo vel lectus viverra posuere. Donec fringilla lorem at nisl tincidunt, sollicitudin dignissim sem pulvinar. Etiam efficitur fringilla tortor sit amet pharetra. Aenean et ligula neque. Nunc laoreet massa a elementum malesuada. Nam tortor ipsum, pulvinar ac ante eget, consectetur sodales sapien. Nunc commodo consectetur lorem, vitae malesuada elit venenatis eget. Nulla facilisi. In aliquam sem sit amet mauris scelerisque, quis imperdiet nulla congue. In molestie placerat felis sit amet euismod. Curabitur non orci eget magna sagittis placerat. Aliquam facilisis, urna sed maximus feugiat, magna dolor pharetra lorem, in vulputate purus nunc in tortor. Donec lobortis metus tincidunt, interdum est non, feugiat neque");
 
         Concessionario c2 = new Concessionario();
         c2.setNome("ValentinoAuto");
         c2.setVia("Via Padova");
         c2.setCitta("L'Aquila");
         c2.setRegione(Regione.ABRUZZO);
+        c2.setDescrizione("Phasellus a rutrum metus. Proin et egestas lectus. Quisque lorem felis, luctus non diam pellentesque, feugiat imperdiet dolor. Sed non facilisis magna, eget rutrum velit. Praesent iaculis magna ut leo rhoncus facilisis. Duis non ligula a diam dapibus molestie vitae vel velit. Cras ut suscipit quam, a elementum enim. Nunc rhoncus vitae ante ut pretium. Quisque porta mollis interdum. Donec consectetur eu lorem quis cursus. Sed laoreet viverra quam. Nullam pellentesque in odio ut ullamcorper.");
 
         Auto a1 = new Auto();
         a1.setModello("Panda");
