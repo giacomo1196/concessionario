@@ -1,4 +1,4 @@
-package it.nttdata.concessionario.model;
+package it.nttdata.concessionario.models;
 
 public enum Regione {
     ABRUZZO,

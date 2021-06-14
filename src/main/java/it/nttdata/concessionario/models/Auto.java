@@ -1,4 +1,4 @@
-package it.nttdata.concessionario.model;
+package it.nttdata.concessionario.models;
 
 import org.springframework.lang.NonNull;
 
@@ -47,5 +47,14 @@ public class Auto {
 
     public void setPrezzo(Double prezzo) {
         this.prezzo = prezzo;
+    }
+
+    @NonNull
+    public Concessionario getConcessionario() {
+        return concessionario;
+    }
+
+    public void setConcessionario(@NonNull Concessionario concessionario) {
+        this.concessionario = concessionario;
     }
 }

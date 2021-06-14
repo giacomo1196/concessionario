@@ -1,4 +1,4 @@
-package it.nttdata.concessionario.model;
+package it.nttdata.concessionario.models;
 
 import org.springframework.lang.NonNull;
 
@@ -32,7 +32,8 @@ public class Dipendente {
     @Min(16)
     private Integer eta;
 
-    public Dipendente() {}
+    public Dipendente() {
+    }
 
     public Long getId() {
         return id;
@@ -42,43 +43,47 @@ public class Dipendente {
         this.id = id;
     }
 
+    @NonNull
     public Concessionario getConcessionario() {
         return concessionario;
     }
 
-    public void setConcessionario(Concessionario concessionario) {
+    public void setConcessionario(@NonNull Concessionario concessionario) {
         this.concessionario = concessionario;
     }
 
+    @NonNull
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
+    public void setNome(@NonNull String nome) {
         this.nome = nome;
     }
 
-    public String getCognomoe() {
+    @NonNull
+    public String getCognome() {
         return cognome;
     }
 
-    public void setCognomoe(String cognomoe) {
-        this.cognome = cognomoe;
+    public void setCognome(@NonNull String cognome) {
+        this.cognome = cognome;
     }
 
-    public double getStipendio() {
+    public Double getStipendio() {
         return stipendio;
     }
 
-    public void setStipendio(double stipendio) {
+    public void setStipendio(Double stipendio) {
         this.stipendio = stipendio;
     }
 
+    @NonNull
     public Integer getEta() {
         return eta;
     }
 
-    public void setEta(Integer eta) {
+    public void setEta(@NonNull Integer eta) {
         this.eta = eta;
     }
 }
